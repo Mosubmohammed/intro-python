@@ -1,47 +1,62 @@
-print('hello')
+# print('hello')
 
-name="""
-mosab
-mophammed
-gazy
-"""
-print(name)
+# name="""
+# mosab
+# mophammed
+# gazy
+# """
+# print(name)
 
-num1=5
-print(num1)
+# num1=5
+# print(num1)
 
-num2=2.5
-print(num2)
+# num2=2.5
+# print(num2)
 
-listP=['a','b','c','d']
-print(listP)    
+# listP=['a','b','c','d']
+# print(listP)    
 
-tb=(11,22,334,55,66)
-print(tb)
+# tb=(11,22,334,55,66)
+# print(tb)
 
-person={
-    'name':'mosab',
-    'age':20,
-    'country':'jordan',
-    'skiills':['cp','java']
+# person={
+#     'name':'mosab',
+#     'age':20,
+#     'country':'jordan',
+#     'skiills':['cp','java']
 
+# }
+# print(person)
+# print(person['skiills'])
+
+
+# list=[1,2,3,4,5]
+# for i in list:
+#     print(i)
+
+# x=23
+# for i in range(0,14,3):
+#     print(i)
+
+# person={
+#     'name':'mosab',
+#     'age':20,
+#     'country':'jordan'
+# }
+# for i in person:
+#     print(i,':',person[i])
+
+
+# news={
+#     'sunday':['welcome':'welcome to the news website','title':'sunday news','content':['the wether the 28 degrees']],
+#     'monday':['welcome':'welcome to the news website','title':'monday news','content':['the wether the 35 degrees']],
+#     'tuesday':['welcome':'welcome to the news website','title':'tuesday news','content':['the wether the 40 degrees']]
+#     }
+news = {
+    'sunday': {'welcome': 'welcome to the news website', 'title': 'sunday news', 'content': ['the weather is 28 degrees']},
+    'monday': {'welcome': 'welcome to the news website', 'title': 'monday news', 'content': ['the weather is 35 degrees']},
+    'tuesday': {'welcome': 'welcome to the news website', 'title': 'tuesday news', 'content': ['the weather is 40 degrees']}
 }
-print(person)
-print(person['skiills'])
 
-
-list=[1,2,3,4,5]
-for i in list:
-    print(i)
-
-x=23
-for i in range(0,14,3):
-    print(i)
-
-person={
-    'name':'mosab',
-    'age':20,
-    'country':'jordan'
-}
-for i in person:
-    print(i,':',person[i])
+for i in news:
+    print(i,':',news[i])
