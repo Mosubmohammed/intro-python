@@ -52,6 +52,42 @@
 #     'monday':['welcome':'welcome to the news website','title':'monday news','content':['the wether the 35 degrees']],
 #     'tuesday':['welcome':'welcome to the news website','title':'tuesday news','content':['the wether the 40 degrees']]
 #     }
+
+
+# if True:
+#     print('myaw')
+# else:
+#     print('else')
+
+
+# import numbers
+
+
+# choose1=input('enter your choice : ')
+
+# if choose1.isdigit():
+#     print(choose1)
+    
+# else:
+#     print('Please enter num2 ')
+
+# i=0
+# for i in range(11):
+#     if i % 2==0:
+#         print(i)
+#     else:
+#         print('odd')
+
+# num=input('Enter a number : ')
+
+
+# if num%2==0:
+#     print('even')
+# else:
+#     print('odd')    
+
+
+
 news = {
     'sunday': {'welcome': 'welcome to the news website', 'title': 'sunday news', 'content': ['the weather is 28 degrees']},
     'monday': {'welcome': 'welcome to the news website', 'title': 'monday news', 'content': ['the weather is 35 degrees']},
@@ -60,3 +96,32 @@ news = {
 
 for i in news:
     print(i,':',news[i])
+
+    
+
+# def myFunction():
+#     print('my function')
+
+# myFunction()
+
+# def myFunction(name,name2):
+#     print(name,name2)
+
+# myFunction('hq','mohjammed')    
+
+
+# def myFunction():
+#     return print('my function111')
+
+# myFunction()
+# print(myFunction)
+
+# num1=int(input('pleses enter ur firrsst num : '))
+# num2=int(input('pleses enter ur sconde1 num : '))
+# def numbers(num1,num2):
+#     return num1 + num2
+
+# print(numbers(num1,num2))
+
+
+    
