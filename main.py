@@ -83,19 +83,20 @@
 
 # if num%2==0:
 #     print('even')
-# else:
-#     print('odd')    
+# # else:
+# #     print('odd')    
 
 
 
-news = {
-    'sunday': {'welcome': 'welcome to the news website', 'title': 'sunday news', 'content': ['the weather is 28 degrees']},
-    'monday': {'welcome': 'welcome to the news website', 'title': 'monday news', 'content': ['the weather is 35 degrees']},
-    'tuesday': {'welcome': 'welcome to the news website', 'title': 'tuesday news', 'content': ['the weather is 40 degrees']}
-}
+# news = {
+#     'sunday': {'welcome': 'welcome to the news website', 
+#     'title': 'sunday news', 'content': ['the weather is 28 degrees']},
+#     'monday': {'welcome': 'welcome to the news website', 'title': 'monday news', 'content': ['the weather is 35 degrees']},
+#     'tuesday': {'welcome': 'welcome to the news website', 'title': 'tuesday news', 'content': ['the weather is 40 degrees']}
+# }
 
-for i in news:
-    print(i,':',news[i])
+# for i in news:
+#     print(i,':',news[i])
 
     
 
@@ -123,5 +124,58 @@ for i in news:
 
 # print(numbers(num1,num2))
 
-
+# i=0
+# wileTest=True
+# while wileTest:
     
+#     if i==5:
+#         i+=1
+#         continue
+#     print(i)
+#     i+=1
+#     if i==10:
+#         break
+# i=1
+# while i:
+#     i+=1
+#     print(i)
+#     if i==10:
+#         break
+
+
+# name=input('enter ur name : ')   
+# print(name)
+
+allpersons=[]
+person={}
+print("welcome to out app")
+while True:
+    print('__'*20)
+    print("1-addd new person")
+    print("2-see all persons")
+    print("3-exit")
+    choice=input('enter ur choice :')
+    if choice=='1':
+        name=input("Enter the person name : ")
+        age =input( "enter the person age : ")
+        if type(age)==
+        job=input('enter the person job :')
+        person['name']=name
+        person['age']=age
+        person['job']=job
+        allpersons.append(person)
+        print("you added person successfully")
+    elif choice=='2':
+       counter=1
+       print('__'*20)
+       print("all persons")
+       for i in allpersons:
+          print("person",":",counter)
+          for key in i:
+              print("   ",key,":",i[key])
+              counter+=1
+    elif choice=='3':
+        print("thanks for using our app")
+        break
+    
+
