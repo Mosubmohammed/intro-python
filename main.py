@@ -157,8 +157,13 @@ while True:
     choice=input('enter ur choice :')
     if choice=='1':
         name=input("Enter the person name : ")
-        age =input( "enter the person age : ")
-        if type(age)==
+        while True:
+            age =input( "enter the person age : ")
+            if age.isdigit():
+                age=int(age)
+                break
+            else:
+                print("please enter a number for age")
         job=input('enter the person job :')
         person['name']=name
         person['age']=age
