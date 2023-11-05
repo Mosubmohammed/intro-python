@@ -230,8 +230,74 @@
 #         break
 
 
-list1=[{"new2":"new"},{"new3":"new"},{"new4":"new"}]
-dic1={"dic1":"dic1"}
-dic2={"dic2":"dic2"}
-list1.insert(0,dic1)
-print(list1)
+# list1=[{"new2":"new"},{"new3":"new"},{"new4":"new"}]
+# dic1={"dic1":"dic1"}
+# dic2={"dic2":"dic2"}
+# list1.insert(0,dic1)
+# print(list1)
+
+# list1.insert(3,dic2)
+# print(list1)
+
+# list1.sort(dic2)
+
+# list3=['aa','ab','at','5','h','7','t','q','c','7']
+# # list3.sort()
+# print(list3)
+
+# # list3.reverse()
+# print(list3)
+
+# print(list3.count('7'))
+# print(list3.__len__())
+
+# # list3.clear()
+# # print(list3)
+# # print(list3.__len__())
+
+# # list3.remove()
+
+# list3.pop(7)
+# print(list3)
+
+
+allpersons=[]
+person={}
+print("welcome to out app")
+while True:
+    print('__'*20)
+    print("1-addd new person")
+    print("2-see all persons")
+    print("3-exit")
+    choice=input('enter ur choice :')
+    if choice=='1':
+        name=input("Enter the person name : ")
+        while True:
+            try:
+                age =int(input( "enter the person age : "))
+                break
+            except:
+                print("please enter a number for age")
+
+        job=input('enter the person job :')
+        person={
+            'name':name,
+            'age':age,
+            'job':job
+        }
+        allpersons.append(person)
+        print("you added person successfully")
+    elif choice=='2':
+       counter=1
+       print('__'*20)
+       print("all persons")
+       for i in allpersons:
+          print("person",":",counter)
+          for key in i:
+              print("   ",key,":",i[key])
+              counter+=1
+    elif choice=='3':
+        print("thanks for using our app")
+        break
+
+
