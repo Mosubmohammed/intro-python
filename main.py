@@ -146,41 +146,92 @@
 # name=input('enter ur name : ')   
 # print(name)
 
-allpersons=[]
-person={}
-print("welcome to out app")
-while True:
-    print('__'*20)
-    print("1-addd new person")
-    print("2-see all persons")
-    print("3-exit")
-    choice=input('enter ur choice :')
-    if choice=='1':
-        name=input("Enter the person name : ")
-        while True:
-            age =input( "enter the person age : ")
-            if age.isdigit():
-                age=int(age)
-                break
-            else:
-                print("please enter a number for age")
-        job=input('enter the person job :')
-        person['name']=name
-        person['age']=age
-        person['job']=job
-        allpersons.append(person)
-        print("you added person successfully")
-    elif choice=='2':
-       counter=1
-       print('__'*20)
-       print("all persons")
-       for i in allpersons:
-          print("person",":",counter)
-          for key in i:
-              print("   ",key,":",i[key])
-              counter+=1
-    elif choice=='3':
-        print("thanks for using our app")
-        break
+# allpersons=[]
+# person={}
+# print("welcome to out app")
+# while True:
+#     print('__'*20)
+#     print("1-addd new person")
+#     print("2-see all persons")
+#     print("3-exit")
+#     choice=input('enter ur choice :')
+#     if choice=='1':
+#         name=input("Enter the person name : ")
+#         while True:
+#             age =input( "enter the person age : ")
+#             if age.isdigit():
+#                 age=int(age)
+#                 break
+#             else:
+#                 print("please enter a number for age")
+#         job=input('enter the person job :')
+#         person['name']=name
+#         person['age']=age
+#         person['job']=job
+#         allpersons.append(person)
+#         print("you added person successfully")
+#     elif choice=='2':
+#        counter=1
+#        print('__'*20)
+#        print("all persons")
+#        for i in allpersons:
+#           print("person",":",counter)
+#           for key in i:
+#               print("   ",key,":",i[key])
+#               counter+=1
+#     elif choice=='3':
+#         print("thanks for using our app")
+#         break
     
 
+
+# try:
+#     print('0')
+# except print(0):
+#     pass    
+
+
+
+# allpersons=[]
+# person={}
+# print("welcome to out app")
+# while True:
+#     print('__'*20)
+#     print("1-addd new person")
+#     print("2-see all persons")
+#     print("3-exit")
+#     choice=input('enter ur choice :')
+#     if choice=='1':
+#         name=input("Enter the person name : ")
+#         while True:
+#             try:
+#                 age =int(input( "enter the person age : "))
+#                 break
+#             except:
+#                 print("please enter a number for age")
+
+#         job=input('enter the person job :')
+#         person['name']=name
+#         person['age']=age
+#         person['job']=job
+#         allpersons.append(person)
+#         print("you added person successfully")
+#     elif choice=='2':
+#        counter=1
+#        print('__'*20)
+#        print("all persons")
+#        for i in allpersons:
+#           print("person",":",counter)
+#           for key in i:
+#               print("   ",key,":",i[key])
+#               counter+=1
+#     elif choice=='3':
+#         print("thanks for using our app")
+#         break
+
+
+list1=[{"new2":"new"},{"new3":"new"},{"new4":"new"}]
+dic1={"dic1":"dic1"}
+dic2={"dic2":"dic2"}
+list1.insert(0,dic1)
+print(list1)
