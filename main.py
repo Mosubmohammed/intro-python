@@ -266,12 +266,24 @@ person={}
 print("welcome to out app")
 while True:
     print('__'*20)
-    print("1-addd new person")
-    print("2-see all persons")
+    print("1-create account")
+    print("2-login")
     print("3-exit")
     choice=input('enter ur choice :')
     if choice=='1':
         name=input("Enter the person name : ")
+        if allpersons !=[]:
+            isExi=True
+            while isExi:
+                for i in allpersons:
+                    if name==i['name']:
+                        print('this name is already exist')
+                        name=input("Enter the person name : ")
+                        isExi=True
+                        break
+                    else:
+                        isExi=False
+                    
         while True:
             try:
                 age =int(input( "enter the person age : "))
@@ -280,10 +292,25 @@ while True:
                 print("please enter a number for age")
 
         job=input('enter the person job :')
+        skills=[]
+        while True:
+            try:
+                counter2=int(input('enter the number of skills :'))
+                break
+            except Exception as e:
+                print('please enter a valid number')
+                continue
+
+        for i in range(counter2):
+            print('enter the skills number ',i+1,':')
+            skills.append(input())
+
+        password=input("Enter the person password : ")
         person={
             'name':name,
             'age':age,
-            'job':job
+            'job':job,
+            'password':password
         }
         allpersons.append(person)
         print("you added person successfully")
