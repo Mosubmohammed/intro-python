@@ -260,7 +260,25 @@
 # list3.pop(7)
 # print(list3)
 
+# dic1={
+#     'name': 'ahmed',
+#     'age':'33',
+#     'jobs':'softwwares',
+#     'skills':['cpp',
+#               'javascript','python']
+# }
+# print(dic1.keys())
+# print(dic1.values())
+# print(dic1.items())
+# print(dic1.get('age'))
+# dic1['name']='mosab'
+# print(dic1.get('name'))
+# dic1['skills'].append('html')
+# dic1['skills'].remove('javascript')
+# dic1['skills'].insert(1,'css')
+# print(dic1)
 
+# and password=='@-_#$%&*' and password=='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 allpersons=[]
 person={}
 print("welcome to out app")
@@ -269,16 +287,17 @@ while True:
     print("1-create account")
     print("2-login")
     print("3-exit")
+    print('4-show all persons')
     choice=input('enter ur choice :')
     if choice=='1':
-        name=input("Enter the person name : ")
+        name=input("Enter the user name : ")
         if allpersons !=[]:
             isExi=True
             while isExi:
                 for i in allpersons:
                     if name==i['name']:
                         print('this name is already exist')
-                        name=input("Enter the person name : ")
+                        name=input("Enter the user name : ")
                         isExi=True
                         break
                     else:
@@ -286,12 +305,12 @@ while True:
                     
         while True:
             try:
-                age =int(input( "enter the person age : "))
+                age =int(input( "enter the user age : "))
                 break
             except:
                 print("please enter a number for age")
 
-        job=input('enter the person job :')
+        job=input('enter the user job :')
         skills=[]
         while True:
             try:
@@ -305,7 +324,18 @@ while True:
             print('enter the skills number ',i+1,':')
             skills.append(input())
 
-        password=input("Enter the person password : ")
+
+        a7='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        while True:
+             password=input("Enter the user password : ")
+             if password.__len__() >= 8 :
+                for i in password:
+                    if password.__len__==a7:
+                        print('!!!!!!!!!!')
+                        break              
+             else:
+                print('try again')
+                            
         person={
             'name':name,
             'age':age,
@@ -315,16 +345,68 @@ while True:
         allpersons.append(person)
         print("you added person successfully")
     elif choice=='2':
-       counter=1
-       print('__'*20)
-       print("all persons")
+       
+       print("__"*20)
+       print('please enter ur name and ur password :')
+       name=input('Enter the name :')
+       password=input('Enter the password :')
        for i in allpersons:
-          print("person",":",counter)
-          for key in i:
-              print("   ",key,":",i[key])
-              counter+=1
+           if i['name']==name and i['password']==password:
+               print('welcome',name)
+               print('**u can update ur info**')
+               userChoose=input('Enter the yes or no :')  
+               if userChoose=='yes': 
+                   print('1-name')
+                   print('2-password')
+                   print('3-job')
+                   print('4-age')
+                   print('5-Exit')
+                   choice2=input('inter ur choice :')
+                   if choice2=='1':
+                       print('enter ur new name :')
+                       person['name']=input()
+                   elif choice2=='2':
+                            print('enter ur new password :')
+                            person['password']=input()
+                   elif choice2=='3':
+                       print('enter ur new job :')
+                       person['job']=input()
+                   elif choice2=='4':
+                       print('enter ur new age :')
+                       person['age']=input()
+                   else:
+                       break  
+                 
+               print('**u can delete ur info')
+               userChoose2=input('do you want to delete ur info yes or no :')  
+               if userChoose2=='yes':
+                   for i in allpersons:
+                    if name==i['name']:
+                        person[i].delete()
+                        break
+               else:   
+                   break
+       else:
+                print('the name or password is incorrect')
+           
     elif choice=='3':
         print("thanks for using our app")
         break
+    elif choice=='4':
+        isAdmin=input('please enter admin password :')
+        if isAdmin=='myaw':
+            counter=1
+            print('__'*20)
+            print("all persons")
+            for i in allpersons:
+                print("person",":",counter)
+            for key in i:
+                print("   ",key,":",i[key])
+                counter+=1
+        else:
+           print('wrong pass') 
+    else:
+        print('wrong choice')
+
 
 
