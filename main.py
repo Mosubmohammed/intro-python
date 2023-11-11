@@ -327,15 +327,33 @@ while True:
             print('enter the skills number ',i+1,':')
             skills.append(input())
 
-
-        a7='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        uppercasse1=False
+        lowercase=False
+        numbers=False
         while True:
-             password=input("Enter the user password : ")
-             if len(password) >= 8 and re.search('[A-Z]', password) and re.search(r'[@#$%^&*]', password):
-                print('Password is valid!')
-                break           
-             else:
-                print('try again')
+            password=input("Enter the user password : ")
+            if len(password)>=8:
+                for i in password:
+                    if i.isupper():
+                        uppercasse1=True
+                    elif i.islower():
+                        lowercase=True
+                    elif i.isdigit():
+                        numbers=True
+                if uppercasse1 and lowercase and numbers:
+                    print('the password is strong') 
+                    break
+                else:
+                    if uppercasse1!=True:
+                        print('the password dont have a uppercase') 
+                    if lowercase!=True:
+                        print('the password dont have a lowercase')  
+                    if numbers!=True:
+                        print('the password dont have a numbers')           
+                    
+            else:
+                print('the password is shorter than 8')                           
+
                             
         person={
             'name':name,
