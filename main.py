@@ -279,6 +279,9 @@
 # print(dic1)
 
 # and password=='@-_#$%&*' and password=='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+import re
+
+
 allpersons=[]
 person={}
 print("welcome to out app")
@@ -328,11 +331,9 @@ while True:
         a7='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         while True:
              password=input("Enter the user password : ")
-             if password.__len__() >= 8 :
-                for i in password:
-                    if password.__len__==a7:
-                        print('!!!!!!!!!!')
-                        break              
+             if len(password) >= 8 and re.search('[A-Z]', password) and re.search(r'[@#$%^&*]', password):
+                print('Password is valid!')
+                break           
              else:
                 print('try again')
                             
@@ -380,13 +381,14 @@ while True:
                print('**u can delete ur info')
                userChoose2=input('do you want to delete ur info yes or no :')  
                if userChoose2=='yes':
-                   for i in allpersons:
-                    if name==i['name']:
-                        person[i].delete()
-                        break
-               else:   
-                   break
-       else:
+                   print('   ')
+            #        for i in allpersons:
+            #         if name==i['name']:
+            #             person[i].delete()
+            #             break
+            #    else:   
+            #        break
+               else:
                 print('the name or password is incorrect')
            
     elif choice=='3':
