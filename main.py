@@ -363,8 +363,7 @@ while True:
         }
         allpersons.append(person)
         print("you added person successfully")
-    elif choice=='2':
-       
+    elif choice=='2': 
        print("__"*20)
        print('please enter ur name and ur password :')
        name=input('Enter the name :')
@@ -372,8 +371,7 @@ while True:
        for i in allpersons:
            if i['name']==name and i['password']==password:
                print('welcome',name)
-               print('**u can update ur info**')
-               userChoose=input('Enter the yes or no :')  
+               userChoose=input('**u can update ur info do u wanna update it yes or no**')  
                if userChoose=='yes': 
                    print('1-name')
                    print('2-password')
@@ -392,22 +390,59 @@ while True:
                        person['job']=input()
                    elif choice2=='4':
                        print('enter ur new age :')
-                       person['age']=input()
-                   else:
-                       break  
+                       person['age']=input() 
                  
-               print('**u can delete ur info')
-               userChoose2=input('do you want to delete ur info yes or no :')  
-               if userChoose2=='yes':
-                   print('   ')
-            #        for i in allpersons:
-            #         if name==i['name']:
-            #             person[i].delete()
-            #             break
-            #    else:   
-            #        break
-               else:
-                print('the name or password is incorrect')
+           else:
+            print('the name or password is incorrect')
+
+       print('do you wanna add new filed')
+       userChoose2=input('Enter the yes or no :')
+       if userChoose2=='yes':
+            userfiled=input('please Enter your new filed type:')
+
+
+            if userfiled=='int':
+                    userfiled2=input('Enter the filed name :')
+                    while True:
+                        try:
+                            userfilrdint=int(input('Enter the filed value :'))
+                            print(userfiled2+' is:  '+userfilrdint)
+                            print('thanks for adding new filed') 
+                            break
+                        except Exception as e:
+                            print('please enter a valid number') 
+
+
+            elif userfiled=='string':
+                userfiled3=input('Enter the filed name :')
+                userfilrdString=input('Enter the filed value :')
+                print(userfiled3+' is:  '+userfilrdString)
+                print('thanks for adding new filed')
+
+
+            elif userfiled=='list':
+                    userfiled2=input('Enter the filed name :')
+                    userChoose3=input('please int the type of ur list')
+                    listUser=[]
+
+                    if userChoose3=='string':      
+                        Usercounter=int(input('enter the number of ur ......:'))
+                        for i in range(Usercounter):
+                            print('please enter ur ..... ',i+1,':')
+                            listUser.append(input())
+                        print('thanks for adding new filed') 
+                    elif userChoose3=='int':
+                        
+                        Usercounter2=int(input('enter the number of ur ......:'))
+                        for i in range(Usercounter2):
+                            print('please enter ur ..... ',i+1,':')
+                            listUser.append(input())
+                        print('thanks for adding new filed') 
+
+                        
+                    elif userChoose3=='dictionary':
+                        print('dic')           
+
            
     elif choice=='3':
         print("thanks for using our app")
