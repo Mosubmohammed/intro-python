@@ -406,7 +406,7 @@ while True:
                     while True:
                         try:
                             userfilrdint=int(input('Enter the filed value :'))
-                            print(userfiled2+' is:  '+userfilrdint)
+                            # print(userfiled2+' is:  '+userfilrdint)
                             print('thanks for adding new filed') 
                             break
                         except Exception as e:
