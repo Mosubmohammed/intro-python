@@ -510,6 +510,25 @@
 #     return afterE
 # print(replaceL(testStr))    
 
+player1=input('choice a world :')
+list1=[]
+tryes=(len(player1))
+for i in range(len(player1)):
+    list1+='_'
+print(list1)
+gameOver=True
+while gameOver:
+    player2=input('choice a character: ')
+    for i in range(len(player1)):
+        char=player1[i]
+        if char==player2:
+            list[i]=player2   
+    if player2 not in player1:
+        tryes-=1
+        if tryes==0:
+            print('game over')
+            break
+
 # words=[]
 # player1=input('enter the world :')
 # for i in player1:
@@ -520,7 +539,7 @@
 #     if player1.__len__==1:
 #             for i in player1:
 #                 if i==player2:
-#                     words[i]=player2
+#                     print('2')
 #                 else:
 #                      print('else2')    
                     
@@ -529,11 +548,11 @@
 #         break 
                      
 
-class Person:
-    name='mosab'
-    phone='0561334282'
-    age=20
-    city='irbid'
-person1=Person()
-print(person1.city)     
+# class Person:
+#     name='mosab'
+#     phone='0561334282'
+#     age=20
+#     city='irbid'
+# person1=Person()
+# print(person1.city)     
 
