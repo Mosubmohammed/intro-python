@@ -509,24 +509,24 @@
 #     return afterE
 # print(replaceL(testStr))    
 
-player1=input('choice a world :')
-list1=[]
-tryes=(len(player1))
-for i in range(len(player1)):
-    list1+='_'
-print(list1)
-gameOver=True
-while gameOver:
-    player2=input('choice a character: ')
-    for i in range(len(player1)):
-        char=player1[i]
-        if char==player2:
-            list[i]=player2   
-    if player2 not in player1:
-        tryes-=1
-        if tryes==0:
-            print('game over')
-            break
+# player1=input('choice a world :')
+# list1=[]
+# tryes=(len(player1))
+# for i in range(len(player1)):
+#     list1+='_'
+# print(list1)
+# gameOver=True
+# while gameOver:
+#     player2=input('choice a character: ')
+#     for i in range(len(player1)):
+#         char=player1[i]
+#         if char==player2:
+#             list[i]=player2   
+#     if player2 not in player1:
+#         tryes-=1
+#         if tryes==0:
+#             print('game over')
+#             break
 
 # words=[]
 # player1=input('enter the world :')
@@ -554,4 +554,31 @@ while gameOver:
 #     city='irbid'
 # person1=Person()
 # print(person1.city)     
+
+
+class Person():
+
+    def __init__(self, name, phone,age, city,pass): 
+        self.name=name
+        self.phone=phone
+        self.age=age
+        self.city=city
+        self.passwoord=pass
+    
+#     def nameAndPhone(self):
+#         return f'name:{self.name},phone:{self.phone}'
+#     def eatingWith(self,nameP):
+#         return f'{self.name} is eating with {nameP}'
+#     def __str__(self):
+#         return f'name: {self.name} ,phone: {self.phone} ,age:{self.age} ,city:{self.city}'
+# Person1=Person(age=20,name='khalid',phone=11111111,city='irbid')
+# Person2=Person(age=30,name='mosab',phone=222222,city='amman')
+# def checkpass(password):
+
+# print(Person1.nameAndPhone())
+# print(Person2.eatingWith('malak'))
+
+while True:
+    
+
 
