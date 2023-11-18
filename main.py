@@ -89,8 +89,7 @@
 
 
 # news = {
-#     'sunday': {'welcome': 'welcome to the news website', 
-#     'title': 'sunday news', 'content': ['the weather is 28 degrees']},
+#     'sunday': {'welcome': 'welcome to the news website', 'title': 'sunday news', 'content': ['the weather is 28 degrees']},
 #     'monday': {'welcome': 'welcome to the news website', 'title': 'monday news', 'content': ['the weather is 35 degrees']},
 #     'tuesday': {'welcome': 'welcome to the news website', 'title': 'tuesday news', 'content': ['the weather is 40 degrees']}
 # }
