@@ -590,20 +590,53 @@ import json
 # print(database.read())
 
 
-def loadData():
-    try:
-        with open('./databse.txt','r')as file:
-            json.load(file)
-        return file
-    except Exception as e:
-        print(e)
-print(loadData())        
+# def loadData():
+#     try:
+#         with open('./databse.txt','r')as file:
+#             json.load(file)
+#         return file
+#     except Exception as e:
+#         print(e)
+# print(loadData())        
 
     
-def saveData(data):
-    with open('./databse.txt','w') as file:
-        json.dump(data,file)
-    print('data saved',data)    
+# def saveData(data):
+#     with open('./databse.txt','w') as file:
+#         json.dump(data,file)
+#     print('data saved',data)    
 
-x={'mosab':'20'}
-saveData(x)
+# x={'mosab':'20'}
+# saveData(x)
+
+class student():
+
+    def __init__(self,name,age,address,id,phone,email,password,twjehimark):
+        self.name = name
+        self.age = age
+        self.__password=password
+        self.address = address
+        self.__phone = phone
+        self.__id=id
+        self.__twjehimark =twjehimark
+        self.email = email
+        self.major=self.getMajoor(self.__twjehimark)
+        
+
+    def getID(self):
+        return self.__id    
+
+    def setID(self,newID):
+        self.__id = newID
+    def getMajoor(self,mark):
+        if mark >=90:
+            return 'doctor'
+        elif  mark >=80:
+            return 'eng'
+        elif mark>=70:
+            return 'laywer'
+
+
+student2=student('mosab',20,'address',151181,'0561334282','email','111',85.0)
+student2.setID(122121122)
+print(student2.getID())     
+print(student2.major)
