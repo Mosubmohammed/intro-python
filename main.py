@@ -614,8 +614,8 @@ class student():
         self.name = name
         self.age = age
         self.__password=password
-        self.address = address
-        self.__phone = phone
+        self.address= address
+        self.__phone= phone
         self.__id=id
         self.__twjehimark =twjehimark
         self.email = email
@@ -634,13 +634,12 @@ class student():
         elif  mark >=80:
             return ['eng','cs']
         elif mark>=70:
-            return ['laywer','cs']
+            return ['lawyer','cs']
 
         for i in range(len(majorList)):
             print(i+1,'-',majorList[i])
         choice=input('enter ur choice :') 
         major=majorList[int(choice)-1]
-        print(majorList)
         return major
     def __readeMark(self):
         return self.getMajoor
