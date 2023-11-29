@@ -608,85 +608,132 @@ import json
 # x={'mosab':'20'}
 # saveData(x)
 
-class student():
 
-    def __init__(self,name,age,address,id,phone,email,password,twjehimark):
-        self.name = name
-        self.age = age
-        self.__password=password
-        self.address= address
-        self.__phone= phone
-        self.__id=id
-        self.__twjehimark =twjehimark
-        self.email = email
-        self.major=self.getMajoor(self.__twjehimark)
+
+# class student():
+
+#     def __init__(self,name,age,address,id,phone,email,password,twjehimark):
+#         self.name = name
+#         self.age = age
+#         self.__password=password
+#         self.address= address
+#         self.__phone= phone
+#         self.__id=id
+#         self.__twjehimark =twjehimark
+#         self.email = email
+#         self.major=self.getMajoor(self.__twjehimark)
         
 
-    def getID(self):
-        return self.__id    
+#     def getID(self):
+#         return self.__id    
 
-    def setID(self,newID):
-        self.__id = newID
-    def getMajoor(self,mark):
-        majorList=[]
-        if mark >=90:
-            return ['eng','cs']
-        elif  mark >=80:
-            return ['eng','cs']
-        elif mark>=70:
-            return ['lawyer','cs']
+#     def setID(self,newID):
+#         self.__id = newID
+#     def getMajoor(self,mark):
+#         majorList=[]
+#         if mark >=90:
+#             return ['doctor','cs']
+#         elif  mark >=80:
+#             return ['eng','cs']
+#         elif mark>=70:
+#             return ['lawyer','cs']
 
-        for i in range(len(majorList)):
-            print(i+1,'-',majorList[i])
-        choice=input('enter ur choice :') 
-        major=majorList[int(choice)-1]
-        return major
-    def __readeMark(self):
-        return self.getMajoor
-    def getMark(self):
-        return self.__readeMark   
+#         for i in range(len(majorList)):
+#             print(i+1,'-',majorList[i])
+#         choice=input('enter ur choice :') 
+#         major=majorList[int(choice)-1]
+#         return major
+#     def __readeMark(self):
+#         return self.getMajoor
+#     def getMark(self):
+#         return self.__readeMark   
 
-print('hellow to our school')
-name=input('enter your name : ')
-age=input('enter your age : ')
-id=input('enter your id : ')
-phone=input('enter your phone : ')
-address=input('enter your address : ')
-email=input('enter your email : ')
-password=input('enter your password : ')
-twjehimark=int(input('Enter your twajehi mark: '))
+# print('hellow to our school')
+# name=input('enter your name : ')
+# age=input('enter your age : ')
+# id=input('enter your id : ')
+# phone=input('enter your phone : ')
+# address=input('enter your address : ')
+# email=input('enter your email : ')
+# password=input('enter your password : ')
+# twjehimark=int(input('Enter your twajehi mark: '))
 
-student1=student(name,age,address,id,phone,email,password,twjehimark)
-# student2=student('mosab',20,'address',151181,'0561334282','email','111',85.0)
-student1.setID(122121122)
-print(student1.getID())     
-print(student1.major)
+# student1=student(name,age,address,id,phone,email,password,twjehimark)
+# # student2=student('mosab',20,'address',151181,'0561334282','email','111',85.0)
+# student1.setID(122121122)
+# print(student1.getID())     
+# print(student1.major)
 
 
-class teacher :
-    def __init__(self,name2,age2,major2,phone2,address2,email2,id2,password2,studentList): 
-        self.name2 = name2
-        self.age2 = age2
-        self.phone2 = phone2
-        self.address2 =address2
-        self.email2 = email2
-        self.__studentList = []
-        self.__password2= password2
-        self.__id2=id2
-        self.major2=major2
-        self.major2=self.getStudentList(self.__studentList)
+# class teacher :
+#     def __init__(self,name2,age2,major2,phone2,address2,email2,id2,password2,studentList): 
+#         self.name2 = name2
+#         self.age2 = age2
+#         self.phone2 = phone2
+#         self.address2 =address2
+#         self.email2 = email2
+#         self.__studentList = []
+#         self.__password2= password2
+#         self.__id2=id2
+#         self.major2=major2
+#         self.major2=self.getStudentList(self.__studentList)
 
     
-    def studentList(self,student):
-        teacherList = []
-        # for i in student.getMajoor:
-        if student1.major==self.major2:
-            self.__studentList.append(student)
-        else:
-            print("Cannot add a student with a different major.")    
-    def getStudentList(self):
-        return self.__studentList
+#     def studentList(self,student):
+#         teacherList = []
+#         # for i in student.getMajoor:
+#         if student1.major==self.major2:
+#             self.__studentList.append(student)
+#         else:
+#             print("Cannot add a student with a different major.")    
+#     def getStudentList(self):
+#         return self.__studentList
 
-    print(getStudentList())        
-teacher1=teacher('ahmed',35,'cs','0561334282','irbid','mosup.050@gmail.com','151181','123456',[])
-print(teacher1.studentList)
+#     print(getStudentList())        
+# teacher1=teacher('ahmed',35,'cs','0561334282','irbid','mosup.050@gmail.com','151181','123456',[])
+# print(teacher1.studentList)
+
+
+# # ! example polymorphism
+
+# class animal():
+#     def __init__(self,name):
+#         self.name=name
+#     def makeSounf(self):
+#             print('iam animal')
+
+# class dog(animal):
+#     def __init__(self,name):
+
+# from pacage1 import *
+
+# pac11=pac1('iam form main')
+# pa22=pac2('iam pac22 form main file')
+
+# import emojis
+
+# emojis.encode('This is a message with emojis :smile: :snake:')
+
+
+# emojis.decode('This is a message with emojis 😄 🐍')
+
+
+# emojis.get('Prefix 😄 🐍 😄 🐍 Sufix')
+# {'😄', '🐍'}
+
+# emojis.count('😄 🐍 😄 🐍')
+
+
+# emojis.count('😄 🐍 😄 🐍', unique=True)
+
+
+# emojis.db.get_emoji_by_alias('snake')
+
+
+# emojis.db.get_categories()
+# {'Activities', 'Travel & Places', 'Smileys & Emotion', 'Symbols', 'Food & Drink', 'Animals & Nature', 'People & Body', 'Objects', 'Flags'}
+# mo=emojis.encode(':snake:')
+# print(mo)
+
+from stringcolor import * 
+print(cs("here we go", "orchid"))   
