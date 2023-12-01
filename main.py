@@ -738,6 +738,7 @@ import json
 # from stringcolor import * 
 # print(cs("here we go", "orchid"))   
 
+
 class vehicle():
 
     def __init__(self,brand,fuelType,milege):
@@ -759,4 +760,16 @@ class vehicle():
 
 class car(vehicle):    
     def __init__(self, brand, fuel_type, mileage, model):
-        super().__init__(brand,fuelType,)
+        super().__init__(brand, fuel_type, mileage)
+        self.model=model
+
+    def get_model(self):
+        return self.model
+    def set_model(self, model):
+        self.model=model
+
+car1 = car("Toyota", "desile", 20000, "Camry")
+print("Initial fuel type:", car1.getFuelType())
+car1.set_fuel_type('Gasoline')
+print("Updated fuel type:", car1.getFuelType())
+print(car1.brand)
